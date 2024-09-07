@@ -3,7 +3,6 @@ import json
 
 CONTACT_FILE = 'contacts.json'
 
-# Function to load contacts from file
 
 
 def load_contacts():
@@ -19,7 +18,6 @@ def load_contacts():
         print(f"Error: Failed to load contacts. Details: {e}")
         return {}
 
-# Function to save contacts to file
 
 
 def save_contacts(contacts):
@@ -29,7 +27,6 @@ def save_contacts(contacts):
     except Exception as e:
         print(f"Error: Failed to save contacts. Details: {e}")
 
-# Function to add a new contact
 
 
 def add_contact(contacts):
@@ -55,7 +52,6 @@ def add_contact(contacts):
     save_contacts(contacts)
     print(f"Contact {name} added successfully.")
 
-# Function to search for a contact by name
 
 
 def search_contact(contacts):
@@ -71,7 +67,6 @@ def search_contact(contacts):
     else:
         print(f"Error: No contact found with the name '{name}'.")
 
-# Function to update an existing contact
 
 
 def update_contact(contacts):
@@ -99,7 +94,6 @@ def update_contact(contacts):
     else:
         print(f"Error: No contact found with the name '{name}'.")
 
-# Main function to run the contact management system
 
 
 def main():
