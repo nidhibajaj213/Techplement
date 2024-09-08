@@ -5,8 +5,6 @@ import uuid
 
 CONTACT_FILE = 'contacts.json'
 
-# Contact Class to handle contact-related data
-
 
 class Contact:
     def __init__(self, contact_id, name, phone, email):
@@ -30,8 +28,6 @@ class Contact:
     @staticmethod
     def is_valid_email(email):
         return re.fullmatch(r"[^@]+@[^@]+\.[^@]+", email) is not None
-
-# ContactManager Class to handle contact operations
 
 
 class ContactManager:
@@ -74,7 +70,7 @@ class ContactManager:
             print("Error: Invalid email address!")
             return
 
-        contact_id = str(uuid.uuid4())  # Unique ID for each contact
+        contact_id = str(uuid.uuid4())
         if name in self.contacts:
             print("Error: Contact with this name already exists!")
             return
@@ -142,8 +138,6 @@ class ContactManager:
                 print("Deletion canceled.")
         else:
             print(f"Error: No contact found with the name '{name}'.")
-
-# Main function to run the contact management system
 
 
 def main():
